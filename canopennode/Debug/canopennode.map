@@ -1,0 +1,770 @@
+******************************************************************************
+                  TI ARM Linker PC v15.12.3                    
+******************************************************************************
+>> Linked Tue May 26 18:12:23 2020
+
+OUTPUT FILE NAME:   <canopennode.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 0000859d
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  RAM                   00000020   ffffffe0  00009f72  ffff606e  RWIX
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000020    00000020    000094a0   000094a0    r-x
+  00000020    00000020    000088c0   000088c0    r-x .text
+  000088e0    000088e0    00000be0   00000be0    r-- .const
+000094c0    000094c0    00000918   00000000    rw-
+  000094c0    000094c0    000005ee   00000000    rw- .data
+  00009ab0    00009ab0    00000220   00000000    rw- .bss
+  00009cd0    00009cd0    00000100   00000000    rw- .stack
+  00009dd0    00009dd0    00000008   00000000    rw- .sysmem
+00009dd8    00009dd8    000001bc   000001bc    r--
+  00009dd8    00009dd8    000001bc   000001bc    r-- .cinit
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.text      0    00000020    000088c0     
+                  00000020    000010f0     rtsv7M3_T_le_eabi.lib : _printfi.obj (.text)
+                  00001110    000010ac     CO_SDOserver.obj (.text:CO_SDO_process)
+                  000021bc    0000050c     CANopen.obj (.text:CO_CANopenInit)
+                  000026c8    000004aa     CO_NMT_Heartbeat.obj (.text:CO_NMT_process)
+                  00002b72    00000002     rtsv7M3_T_le_eabi.lib : mpu_init.obj (.text)
+                  00002b74    000003dc                           : memory.obj (.text)
+                  00002f50    00000330     CANopen.obj (.text:CO_new)
+                  00003280    00000324     rtsv7M3_T_le_eabi.lib : trgdrv.obj (.text)
+                  000035a4    0000030c                           : lowlev.obj (.text)
+                  000038b0    0000026c     CO_Emergency.obj (.text:CO_EM_process)
+                  00003b1c    00000254     CO_HBconsumer.obj (.text:CO_HBconsumer_process)
+                  00003d70    00000244     main_blank.obj (.text:main)
+                  00003fb4    000001f4     CO_PDO.obj (.text:CO_PDOfindMap)
+                  000041a8    000001f4     rtsv7M3_T_le_eabi.lib : ull_div_t2.obj (.text)
+                  0000439c    000001c8     CO_PDO.obj (.text:CO_ODF_TPDOcom)
+                  00004564    000001c4     rtsv7M3_T_le_eabi.lib : fopen.obj (.text)
+                  00004728    000001b6                           : fd_add_t2.obj (.text)
+                  000048de    00000002                           : startup.obj (.text)
+                  000048e0    000001ac     CO_SDOserver.obj (.text:CO_SDO_init)
+                  00004a8c    00000198     CO_SDOserver.obj (.text:CO_SDO_receive)
+                  00004c24    00000184     CO_SYNC.obj (.text:CO_SYNC_init)
+                  00004da8    00000178     CO_SDOclient.obj (.text:CO_SDOclient_receive)
+                  00004f20    0000016c     CO_Emergency.obj (.text:CO_EM_init)
+                  0000508c    00000168     CO_HBconsumer.obj (.text:CO_HBconsumer_initEntry)
+                  000051f4    00000168     CANopen.obj (.text:CO_delete)
+                  0000535c    00000160     CO_PDO.obj (.text:CO_ODF_RPDOcom)
+                  000054bc    00000160     CO_SDOserver.obj (.text:CO_SDO_initTransfer)
+                  0000561c    0000013c     CO_SDOclient.obj (.text:CO_SDOclient_setup)
+                  00005758    00000138     CO_HBconsumer.obj (.text:CO_HBconsumer_init)
+                  00005890    00000136     rtsv7M3_T_le_eabi.lib : fd_div_t2.obj (.text)
+                  000059c6    00000002     --HOLE-- [fill = 0]
+                  000059c8    00000134     CO_NMT_Heartbeat.obj (.text:CO_NMT_init)
+                  00005afc    00000134     rtsv7M3_T_le_eabi.lib : fputs.obj (.text)
+                  00005c30    00000124     CO_TIME.obj (.text:CO_TIME_init)
+                  00005d54    00000122     CO_driver_blank.obj (.text:CO_CANverifyErrors)
+                  00005e76    0000011e     CO_Emergency.obj (.text:CO_errorReport)
+                  00005f94    00000118     CO_PDO.obj (.text:CO_TPDO_init)
+                  000060ac    00000116     CO_Emergency.obj (.text:CO_errorReset)
+                  000061c2    00000114     CO_driver_blank.obj (.text:CO_CANmodule_init)
+                  000062d6    00000110     CO_TIME.obj (.text:CO_TIME_process)
+                  000063e6    00000002     --HOLE-- [fill = 0]
+                  000063e8    0000010c     CO_SYNC.obj (.text:CO_ODF_1005)
+                  000064f4    00000104     CO_SDOserver.obj (.text:CO_SDO_writeOD)
+                  000065f8    000000fc     rtsv7M3_T_le_eabi.lib : fd_mul_t2.obj (.text)
+                  000066f4    000000f0     CO_SDOserver.obj (.text:CO_SDO_readOD)
+                  000067e4    000000e0     CANopen.obj (.text:CO_process)
+                  000068c4    000000de     CO_NMT_Heartbeat.obj (.text:CO_NMT_receive)
+                  000069a2    00000002     --HOLE-- [fill = 0]
+                  000069a4    000000dc     rtsv7M3_T_le_eabi.lib : setvbuf.obj (.text)
+                  00006a80    000000d8     CO_PDO.obj (.text:CO_ODF_RPDOmap)
+                  00006b58    000000d8     CO_PDO.obj (.text:CO_ODF_TPDOmap)
+                  00006c30    000000d8     CO_PDO.obj (.text:CO_RPDO_init)
+                  00006d08    000000d6     CO_PDO.obj (.text:CO_TPDOconfigMap)
+                  00006dde    000000d2     CO_PDO.obj (.text:CO_RPDOconfigMap)
+                  00006eb0    000000d0     rtsv7M3_T_le_eabi.lib : s_scalbn.obj (.text)
+                  00006f80    000000ce     CO_SDOserver.obj (.text:CO_OD_find)
+                  0000704e    00000002     --HOLE-- [fill = 0]
+                  00007050    000000c8     rtsv7M3_T_le_eabi.lib : fflush.obj (.text)
+                  00007118    000000c0     CO_PDO.obj (.text:CO_RPDOconfigCom)
+                  000071d8    000000b2     CO_SDOserver.obj (.text:CO_OD_configure)
+                  0000728a    000000b2     CO_SDOserver.obj (.text:CO_OD_getAttribute)
+                  0000733c    000000ac     CO_SDOclient.obj (.text:CO_SDOclient_init)
+                  000073e8    000000ac     CO_fifo.obj (.text:CO_fifo_write)
+                  00007494    000000ac     rtsv7M3_T_le_eabi.lib : _io_perm.obj (.text)
+                  00007540    000000a6     CO_SYNC.obj (.text:CO_SYNC_receive)
+                  000075e6    00000002     --HOLE-- [fill = 0]
+                  000075e8    0000009c     CO_SYNC.obj (.text:CO_ODF_1019)
+                  00007684    0000009c     rtsv7M3_T_le_eabi.lib : memcpy_t2.obj (.text)
+                  00007720    00000098                           : fclose.obj (.text)
+                  000077b8    00000098                           : fputc.obj (.text)
+                  00007850    00000096     CO_driver_blank.obj (.text:CO_CANrxBufferInit)
+                  000078e6    00000092     CO_SDOserver.obj (.text:CO_OD_getLength)
+                  00007978    00000090     CO_PDO.obj (.text:CO_TPDOconfigCom)
+                  00007a08    0000008e     CO_SDOserver.obj (.text:CO_OD_getDataPointer)
+                  00007a96    0000008a     CO_PDO.obj (.text:CO_PDO_receive)
+                  00007b20    00000086     rtsv7M3_T_le_eabi.lib : fd_cmp_t2.obj (.text:__aeabi_cdcmple)
+                  00007ba6    00000086                           : fd_cmp_t2.obj (.text:__aeabi_cdrcmple)
+                  00007c2c    00000084     CO_Emergency.obj (.text:CO_ODF_1003)
+                  00007cb0    0000007a     rtsv7M3_T_le_eabi.lib : memset_t2.obj (.text)
+                  00007d2a    00000072     CO_SDOserver.obj (.text:CO_SDO_abort)
+                  00007d9c    00000070     CO_HBconsumer.obj (.text:CO_ODF_1016)
+                  00007e0c    00000070     rtsv7M3_T_le_eabi.lib : autoinit.obj (.text)
+                  00007e7c    00000070                           : printf.obj (.text)
+                  00007eec    0000006c     CO_driver_blank.obj (.text:CO_CANtxBufferInit)
+                  00007f58    0000006a     rtsv7M3_T_le_eabi.lib : copy_decompress_rle.obj (.text)
+                  00007fc2    00000068     CO_TIME.obj (.text:CO_TIME_receive)
+                  0000802a    00000002     --HOLE-- [fill = 0]
+                  0000802c    00000068     rtsv7M3_T_le_eabi.lib : trgmsg.obj (.text)
+                  00008094    00000064                           : fseek.obj (.text)
+                  000080f8    00000062     CO_SYNC.obj (.text:CO_ODF_1006)
+                  0000815a    00000002     --HOLE-- [fill = 0]
+                  0000815c    0000005c     crc16-ccitt.obj (.text:crc16_ccitt)
+                  000081b8    0000005c     rtsv7M3_T_le_eabi.lib : s_frexp.obj (.text)
+                  00008214    0000005a     CO_Emergency.obj (.text:CO_EM_receive)
+                  0000826e    0000005a     CO_Emergency.obj (.text:CO_isError)
+                  000082c8    00000058     CANopen.obj (.text:CO_CANinit)
+                  00008320    00000056     CO_driver_blank.obj (.text:CO_CANsend)
+                  00008376    00000056     rtsv7M3_T_le_eabi.lib : ltoa.obj (.text)
+                  000083cc    00000054                           : exit.obj (.text)
+                  00008420    00000052     CO_SDOserver.obj (.text:CO_OD_getFlagsPointer)
+                  00008472    00000002     --HOLE-- [fill = 0]
+                  00008474    0000004c     rtsv7M3_T_le_eabi.lib : atoi.obj (.text)
+                  000084c0    0000004c                           : cpy_tbl.obj (.text)
+                  0000850c    00000048                           : fd_toi_t2.obj (.text)
+                  00008554    00000046     CO_HBconsumer.obj (.text:CO_HBcons_receive)
+                  0000859a    00000002     --HOLE-- [fill = 0]
+                  0000859c    00000040     rtsv7M3_T_le_eabi.lib : boot.obj (.text)
+                  000085dc    0000003e     CO_SDOserver.obj (.text:CO_ODF_1200)
+                  0000861a    00000002     --HOLE-- [fill = 0]
+                  0000861c    0000003c     CO_fifo.obj (.text:CO_fifo_crc16_ccitt)
+                  00008658    00000038     CO_Emergency.obj (.text:CO_ODF_1014)
+                  00008690    00000036     CO_fifo.obj (.text:CO_fifo_init)
+                  000086c6    00000030     rtsv7M3_T_le_eabi.lib : strncpy.obj (.text)
+                  000086f6    0000002e                           : i_tofd_t2.obj (.text)
+                  00008724    00000020                           : memchr.obj (.text)
+                  00008744    0000001a                           : memccpy.obj (.text)
+                  0000875e    00000002     --HOLE-- [fill = 0]
+                  00008760    00000018                           : args_main.obj (.text)
+                  00008778    00000018                           : strcmp.obj (.text)
+                  00008790    00000016     CO_PDO.obj (.text:CO_getUint16)
+                  000087a6    00000016     rtsv7M3_T_le_eabi.lib : strchr.obj (.text)
+                  000087bc    00000016                           : strcpy.obj (.text)
+                  000087d2    00000014     CO_Emergency.obj (.text:CO_getUint32)
+                  000087e6    00000014     CO_HBconsumer.obj (.text:CO_getUint32)
+                  000087fa    00000014     CO_PDO.obj (.text:CO_getUint32)
+                  0000880e    00000014     CO_SDOserver.obj (.text:CO_getUint32)
+                  00008822    00000014     CO_SYNC.obj (.text:CO_getUint32)
+                  00008836    00000014     CO_Emergency.obj (.text:CO_setUint32)
+                  0000884a    00000014     CO_PDO.obj (.text:CO_setUint32)
+                  0000885e    00000014     CO_SDOserver.obj (.text:CO_setUint32)
+                  00008872    00000002     --HOLE-- [fill = 0]
+                  00008874    00000014     rtsv7M3_T_le_eabi.lib : _lock.obj (.text)
+                  00008888    00000014                           : strlen.obj (.text)
+                  0000889c    00000010     CO_driver_blank.obj (.text:CO_CANsetNormalMode)
+                  000088ac    0000000e     rtsv7M3_T_le_eabi.lib : copy_decompress_none.obj (.text:decompress:none)
+                  000088ba    0000000a     CO_driver_blank.obj (.text:CO_CANmodule_disable)
+                  000088c4    0000000a     CO_driver_blank.obj (.text:CO_CANsetConfigurationMode)
+                  000088ce    00000008     rtsv7M3_T_le_eabi.lib : s_copysign.obj (.text)
+                  000088d6    00000006                           : copy_decompress_rle.obj (.text:decompress:rle24)
+                  000088dc    00000004                           : pre_init.obj (.text)
+
+.const     0    000088e0    00000be0     
+                  000088e0    000002ac     CO_OD.obj (.const:CO_OD)
+                  00008b8c    00000200     CO_fifo.obj (.const:CO_fifo_crc16_ccitt_table)
+                  00008d8c    00000200     crc16-ccitt.obj (.const:crc16_ccitt_table)
+                  00008f8c    00000101     rtsv7M3_T_le_eabi.lib : ctype.obj (.const:.string:_ctypes_)
+                  0000908d    00000003     --HOLE-- [fill = 0]
+                  00009090    00000048     CO_OD.obj (.const:OD_record1600)
+                  000090d8    00000048     CO_OD.obj (.const:OD_record1601)
+                  00009120    00000048     CO_OD.obj (.const:OD_record1602)
+                  00009168    00000048     CO_OD.obj (.const:OD_record1603)
+                  000091b0    00000048     CO_OD.obj (.const:OD_record1A00)
+                  000091f8    00000048     CO_OD.obj (.const:OD_record1A01)
+                  00009240    00000048     CO_OD.obj (.const:OD_record1A02)
+                  00009288    00000048     CO_OD.obj (.const:OD_record1A03)
+                  000092d0    00000038     CO_OD.obj (.const:OD_record1800)
+                  00009308    00000038     CO_OD.obj (.const:OD_record1801)
+                  00009340    00000038     CO_OD.obj (.const:OD_record1802)
+                  00009378    00000038     CO_OD.obj (.const:OD_record1803)
+                  000093b0    00000030     CO_OD.obj (.const:OD_record2120)
+                  000093e0    00000028     CO_OD.obj (.const:OD_record1018)
+                  00009408    00000020     CO_OD.obj (.const:OD_record1280)
+                  00009428    00000020     CO_OD.obj (.const:OD_record2130)
+                  00009448    00000018     CO_OD.obj (.const:OD_record1200)
+                  00009460    00000018     CO_OD.obj (.const:OD_record1400)
+                  00009478    00000018     CO_OD.obj (.const:OD_record1401)
+                  00009490    00000018     CO_OD.obj (.const:OD_record1402)
+                  000094a8    00000018     CO_OD.obj (.const:OD_record1403)
+
+.data      0    000094c0    000005ee     UNINITIALIZED
+                  000094c0    0000025c     CO_OD.obj (.data:CO_OD_ROM)
+                  0000971c    00000004     CANopen.obj (.data)
+                  00009720    00000140     CO_OD.obj (.data:CO_OD_RAM)
+                  00009860    000000f0     rtsv7M3_T_le_eabi.lib : defs.obj (.data:_ftable)
+                  00009950    000000d0                           : lowlev.obj (.data:$O1$$)
+                  00009a20    0000004c     CO_OD.obj (.data:CO_OD_EEPROM)
+                  00009a6c    00000010     rtsv7M3_T_le_eabi.lib : defs.obj (.data)
+                  00009a7c    0000000c                           : exit.obj (.data:$O1$$)
+                  00009a88    0000000c                           : memory.obj (.data:$O1$$)
+                  00009a94    00000008                           : _lock.obj (.data:$O1$$)
+                  00009a9c    00000004     CO_PDO.obj (.data)
+                  00009aa0    00000004     rtsv7M3_T_le_eabi.lib : errno.obj (.data)
+                  00009aa4    00000004                           : fopen.obj (.data)
+                  00009aa8    00000004                           : stkdepth_vars.obj (.data)
+                  00009aac    00000002     main_blank.obj (.data)
+
+.bss       0    00009ab0    00000220     UNINITIALIZED
+                  00009ab0    00000120     rtsv7M3_T_le_eabi.lib : trgmsg.obj (.bss:_CIOBUF_)
+                  00009bd0    000000a0     (.common:__TI_tmpnams)
+                  00009c70    00000044     CANopen.obj (.bss:COO)
+                  00009cb4    00000010     CANopen.obj (.bss)
+                  00009cc4    00000008     rtsv7M3_T_le_eabi.lib : trgdrv.obj (.bss:parmbuf)
+                  00009ccc    00000004     CO_PDO.obj (.bss)
+
+.cinit     0    00009dd8    000001bc     
+                  00009dd8    00000196     (.cinit..data.load) [load image, compression = rle]
+                  00009f6e    00000002     --HOLE-- [fill = 0]
+                  00009f70    0000000b     (.cinit..bss.load) [load image, compression = rle]
+                  00009f7b    00000001     --HOLE-- [fill = 0]
+                  00009f7c    00000008     (__TI_handler_table)
+                  00009f84    00000010     (__TI_cinit_table)
+
+.init_array 
+*          0    00000020    00000000     UNINITIALIZED
+
+.stack     0    00009cd0    00000100     UNINITIALIZED
+                  00009cd0    00000100     --HOLE--
+
+.sysmem    0    00009dd0    00000008     UNINITIALIZED
+                  00009dd0    00000008     rtsv7M3_T_le_eabi.lib : memory.obj (.sysmem)
+
+MODULE SUMMARY
+
+       Module                     code    ro data   rw data
+       ------                     ----    -------   -------
+    .\
+       CO_SDOserver.obj           7104    0         0      
+       CO_PDO.obj                 3196    0         8      
+       CANopen.obj                2780    0         88     
+       CO_OD.obj                  0       1756      1000   
+       CO_Emergency.obj           1956    0         0      
+       CO_NMT_Heartbeat.obj       1724    0         0      
+       CO_HBconsumer.obj          1470    0         0      
+       CO_SYNC.obj                1096    0         0      
+       CO_driver_blank.obj        946     0         0      
+       CO_SDOclient.obj           864     0         0      
+       CO_fifo.obj                286     512       0      
+       CO_TIME.obj                668     0         0      
+       crc16-ccitt.obj            92      512       0      
+       main_blank.obj             580     0         2      
+    +--+--------------------------+-------+---------+---------+
+       Total:                     22762   2780      1098   
+                                                           
+    D:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/lib/rtsv7M3_T_le_eabi.lib
+       _printfi.obj               4336    0         0      
+       memory.obj                 988     0         12     
+       lowlev.obj                 780     0         208    
+       trgdrv.obj                 804     0         8      
+       ull_div_t2.obj             500     0         0      
+       fopen.obj                  452     0         4      
+       fd_add_t2.obj              438     0         0      
+       defs.obj                   0       0         416    
+       trgmsg.obj                 104     0         288    
+       fd_div_t2.obj              310     0         0      
+       fputs.obj                  308     0         0      
+       fd_cmp_t2.obj              268     0         0      
+       ctype.obj                  0       257       0      
+       fd_mul_t2.obj              252     0         0      
+       setvbuf.obj                220     0         0      
+       s_scalbn.obj               208     0         0      
+       fflush.obj                 200     0         0      
+       _io_perm.obj               172     0         0      
+       memcpy_t2.obj              156     0         0      
+       fclose.obj                 152     0         0      
+       fputc.obj                  152     0         0      
+       memset_t2.obj              122     0         0      
+       autoinit.obj               112     0         0      
+       copy_decompress_rle.obj    112     0         0      
+       printf.obj                 112     0         0      
+       fseek.obj                  100     0         0      
+       exit.obj                   84      0         12     
+       s_frexp.obj                92      0         0      
+       ltoa.obj                   86      0         0      
+       atoi.obj                   76      0         0      
+       cpy_tbl.obj                76      0         0      
+       fd_toi_t2.obj              72      0         0      
+       boot.obj                   64      0         0      
+       strncpy.obj                48      0         0      
+       i_tofd_t2.obj              46      0         0      
+       memchr.obj                 32      0         0      
+       _lock.obj                  20      0         8      
+       memccpy.obj                26      0         0      
+       args_main.obj              24      0         0      
+       strcmp.obj                 24      0         0      
+       strchr.obj                 22      0         0      
+       strcpy.obj                 22      0         0      
+       strlen.obj                 20      0         0      
+       copy_decompress_none.obj   14      0         0      
+       s_copysign.obj             8       0         0      
+       errno.obj                  0       0         4      
+       pre_init.obj               4       0         0      
+       stkdepth_vars.obj          0       0         4      
+       mpu_init.obj               2       0         0      
+       startup.obj                2       0         0      
+    +--+--------------------------+-------+---------+---------+
+       Total:                     12222   257       964    
+                                                           
+       Heap:                      0       0         8      
+       Stack:                     0       0         256    
+       Linker Generated:          0       441       0      
+    +--+--------------------------+-------+---------+---------+
+       Grand Total:               34984   3478      2326   
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00009f84 records: 2, size/record: 8, table size: 16
+	.data: load addr=00009dd8, load size=00000196 bytes, run addr=000094c0, run size=000005ee bytes, compression=rle
+	.bss: load addr=00009f70, load size=0000000b bytes, run addr=00009ab0, run size=00000220 bytes, compression=rle
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00009f7c records: 2, size/record: 4, table size: 8
+	index: 0, handler: __TI_decompress_rle24
+	index: 1, handler: __TI_decompress_none
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                           
+-------   ----                           
+000083cd  C$$EXIT                        
+0000805b  C$$IO$$                        
+0000971c  CO                             
+000082c9  CO_CANinit                     
+000088bb  CO_CANmodule_disable           
+000061c3  CO_CANmodule_init              
+000021bd  CO_CANopenInit                 
+00007851  CO_CANrxBufferInit             
+00008321  CO_CANsend                     
+000088c5  CO_CANsetConfigurationMode     
+0000889d  CO_CANsetNormalMode            
+00007eed  CO_CANtxBufferInit             
+00005d55  CO_CANverifyErrors             
+00004f21  CO_EM_init                     
+000038b1  CO_EM_process                  
+00005759  CO_HBconsumer_init             
+0000508d  CO_HBconsumer_initEntry        
+00003b1d  CO_HBconsumer_process          
+000059c9  CO_NMT_init                    
+000026c9  CO_NMT_process                 
+000088e0  CO_OD                          
+00009a20  CO_OD_EEPROM                   
+00009720  CO_OD_RAM                      
+000094c0  CO_OD_ROM                      
+000071d9  CO_OD_configure                
+00006f81  CO_OD_find                     
+0000728b  CO_OD_getAttribute             
+00007a09  CO_OD_getDataPointer           
+00008421  CO_OD_getFlagsPointer          
+000078e7  CO_OD_getLength                
+00006c31  CO_RPDO_init                   
+000048e1  CO_SDO_init                    
+000054bd  CO_SDO_initTransfer            
+00001111  CO_SDO_process                 
+000066f5  CO_SDO_readOD                  
+000064f5  CO_SDO_writeOD                 
+0000733d  CO_SDOclient_init              
+0000561d  CO_SDOclient_setup             
+00004c25  CO_SYNC_init                   
+00005c31  CO_TIME_init                   
+000062d7  CO_TIME_process                
+00005f95  CO_TPDO_init                   
+000051f5  CO_delete                      
+00005e77  CO_errorReport                 
+000060ad  CO_errorReset                  
+00008691  CO_fifo_init                   
+000073e9  CO_fifo_write                  
+0000826f  CO_isError                     
+00002f51  CO_new                         
+000067e5  CO_process                     
+00009aac  CO_timer1ms                    
+00003557  HOSTclock                      
+0000351f  HOSTclose                      
+000034e1  HOSTgetenv                     
+00003485  HOSTlseek                      
+00003433  HOSTopen                       
+000033e7  HOSTread                       
+00003389  HOSTrename                     
+0000334f  HOSTtime                       
+00003305  HOSTtime64                     
+000032cd  HOSTunlink                     
+00003281  HOSTwrite                      
+000093e0  OD_record1018                  
+00009448  OD_record1200                  
+00009408  OD_record1280                  
+00009460  OD_record1400                  
+00009478  OD_record1401                  
+00009490  OD_record1402                  
+000094a8  OD_record1403                  
+00009090  OD_record1600                  
+000090d8  OD_record1601                  
+00009120  OD_record1602                  
+00009168  OD_record1603                  
+000092d0  OD_record1800                  
+00009308  OD_record1801                  
+00009340  OD_record1802                  
+00009378  OD_record1803                  
+000091b0  OD_record1A00                  
+000091f8  OD_record1A01                  
+00009240  OD_record1A02                  
+00009288  OD_record1A03                  
+000093b0  OD_record2120                  
+00009428  OD_record2130                  
+UNDEFED   SHT$$INIT_ARRAY$$Base          
+UNDEFED   SHT$$INIT_ARRAY$$Limit         
+00009ab0  __CIOBUF_                      
+00009dd0  __STACK_END                    
+00000100  __STACK_SIZE                   
+00000008  __SYSMEM_SIZE                  
+00009f84  __TI_CINIT_Base                
+00009f94  __TI_CINIT_Limit               
+00009f7c  __TI_Handler_Table_Base        
+00009f84  __TI_Handler_Table_Limit       
+00007e0d  __TI_auto_init                 
+0000462d  __TI_cleanup                   
+00009a7c  __TI_cleanup_ptr               
+00007721  __TI_closefile                 
+000088ad  __TI_decompress_none           
+000088d7  __TI_decompress_rle24          
+00007051  __TI_doflush                   
+00009a80  __TI_dtors_ptr                 
+00009a84  __TI_enable_exit_profile_output
+00009a6c  __TI_ft_end                    
+ffffffff  __TI_pprof_out_hndl            
+00000e0b  __TI_printfi                   
+ffffffff  __TI_prof_data_size            
+ffffffff  __TI_prof_data_start           
+000074f7  __TI_rd_ok                     
+0000805f  __TI_readmsg                   
+00009dd8  __TI_static_base__             
+00009bd0  __TI_tmpnams                   
+0000802d  __TI_writemsg                  
+00007495  __TI_wrt_ok                    
+00007b21  __aeabi_cdcmpeq                
+00007b21  __aeabi_cdcmple                
+00007ba7  __aeabi_cdrcmple               
+0000850d  __aeabi_d2iz                   
+00004733  __aeabi_dadd                   
+00005891  __aeabi_ddiv                   
+000065f9  __aeabi_dmul                   
+00004729  __aeabi_dsub                   
+000086f7  __aeabi_i2d                    
+00007cb1  __aeabi_memclr                 
+00007cb1  __aeabi_memclr4                
+00007cb1  __aeabi_memclr8                
+00007685  __aeabi_memcpy                 
+00007685  __aeabi_memcpy4                
+00007685  __aeabi_memcpy8                
+00007cb3  __aeabi_memset                 
+00007cb3  __aeabi_memset4                
+00007cb3  __aeabi_memset8                
+00009a78  __aeabi_stderr                 
+00009a70  __aeabi_stdin                  
+00009a74  __aeabi_stdout                 
+000041a9  __aeabi_uldivmod               
+ffffffff  __binit__                      
+ffffffff  __c_args__                     
+00002b73  __mpu_init                     
+00009cd0  __stack                        
+00008761  _args_main                     
+0000859d  _c_int00                       
+00008f8c  _ctypes_                       
+00009860  _ftable                        
+00009a94  _lock                          
+00008883  _nop                           
+0000887b  _register_lock                 
+00008875  _register_unlock               
+00009dd0  _sys_memory                    
+000048df  _system_post_cinit             
+000088dd  _system_pre_init               
+00009a98  _unlock                        
+000083d1  abort                          
+00003805  add_device                     
+00008475  atoi                           
+ffffffff  binit                          
+00002f1d  calloc                         
+000037b5  close                          
+000084c1  copy_in                        
+000088cf  copysign                       
+000088cf  copysignl                      
+0000815d  crc16_ccitt                    
+00009aa0  errno                          
+000083d9  exit                           
+00007787  fclose                         
+0000709d  fflush                         
+00004683  fopen                          
+000077b9  fputc                          
+00005afd  fputs                          
+00002c6b  free                           
+00004659  freopen                        
+000081b9  frexp                          
+000081b9  frexpl                         
+00008095  fseek                          
+00006eb1  ldexp                          
+00006eb1  ldexpl                         
+00003791  lseek                          
+00008377  ltoa                           
+00003d71  main                           
+00009aa8  main_func_sp                   
+00002c03  malloc                         
+00002e39  memalign                       
+00008745  memccpy                        
+00008725  memchr                         
+00007685  memcpy                         
+00007cb9  memset                         
+00002b75  minit                          
+000036e3  open                           
+00007e85  printf                         
+000077b9  putc                           
+0000783d  putchar                        
+00005c07  puts                           
+000036bf  read                           
+00002d2d  realloc                        
+00003635  remove                         
+00003697  remove_device                  
+00003659  rename                         
+00006eb1  scalbn                         
+00006eb1  scalbnl                        
+000069a5  setvbuf                        
+000087a7  strchr                         
+00008779  strcmp                         
+000087bd  strcpy                         
+00008889  strlen                         
+000086c7  strncpy                        
+00003635  unlink                         
+000035a5  write                          
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                           
+-------   ----                           
+00000008  __SYSMEM_SIZE                  
+00000100  __STACK_SIZE                   
+00000e0b  __TI_printfi                   
+00001111  CO_SDO_process                 
+000021bd  CO_CANopenInit                 
+000026c9  CO_NMT_process                 
+00002b73  __mpu_init                     
+00002b75  minit                          
+00002c03  malloc                         
+00002c6b  free                           
+00002d2d  realloc                        
+00002e39  memalign                       
+00002f1d  calloc                         
+00002f51  CO_new                         
+00003281  HOSTwrite                      
+000032cd  HOSTunlink                     
+00003305  HOSTtime64                     
+0000334f  HOSTtime                       
+00003389  HOSTrename                     
+000033e7  HOSTread                       
+00003433  HOSTopen                       
+00003485  HOSTlseek                      
+000034e1  HOSTgetenv                     
+0000351f  HOSTclose                      
+00003557  HOSTclock                      
+000035a5  write                          
+00003635  remove                         
+00003635  unlink                         
+00003659  rename                         
+00003697  remove_device                  
+000036bf  read                           
+000036e3  open                           
+00003791  lseek                          
+000037b5  close                          
+00003805  add_device                     
+000038b1  CO_EM_process                  
+00003b1d  CO_HBconsumer_process          
+00003d71  main                           
+000041a9  __aeabi_uldivmod               
+0000462d  __TI_cleanup                   
+00004659  freopen                        
+00004683  fopen                          
+00004729  __aeabi_dsub                   
+00004733  __aeabi_dadd                   
+000048df  _system_post_cinit             
+000048e1  CO_SDO_init                    
+00004c25  CO_SYNC_init                   
+00004f21  CO_EM_init                     
+0000508d  CO_HBconsumer_initEntry        
+000051f5  CO_delete                      
+000054bd  CO_SDO_initTransfer            
+0000561d  CO_SDOclient_setup             
+00005759  CO_HBconsumer_init             
+00005891  __aeabi_ddiv                   
+000059c9  CO_NMT_init                    
+00005afd  fputs                          
+00005c07  puts                           
+00005c31  CO_TIME_init                   
+00005d55  CO_CANverifyErrors             
+00005e77  CO_errorReport                 
+00005f95  CO_TPDO_init                   
+000060ad  CO_errorReset                  
+000061c3  CO_CANmodule_init              
+000062d7  CO_TIME_process                
+000064f5  CO_SDO_writeOD                 
+000065f9  __aeabi_dmul                   
+000066f5  CO_SDO_readOD                  
+000067e5  CO_process                     
+000069a5  setvbuf                        
+00006c31  CO_RPDO_init                   
+00006eb1  ldexp                          
+00006eb1  ldexpl                         
+00006eb1  scalbn                         
+00006eb1  scalbnl                        
+00006f81  CO_OD_find                     
+00007051  __TI_doflush                   
+0000709d  fflush                         
+000071d9  CO_OD_configure                
+0000728b  CO_OD_getAttribute             
+0000733d  CO_SDOclient_init              
+000073e9  CO_fifo_write                  
+00007495  __TI_wrt_ok                    
+000074f7  __TI_rd_ok                     
+00007685  __aeabi_memcpy                 
+00007685  __aeabi_memcpy4                
+00007685  __aeabi_memcpy8                
+00007685  memcpy                         
+00007721  __TI_closefile                 
+00007787  fclose                         
+000077b9  fputc                          
+000077b9  putc                           
+0000783d  putchar                        
+00007851  CO_CANrxBufferInit             
+000078e7  CO_OD_getLength                
+00007a09  CO_OD_getDataPointer           
+00007b21  __aeabi_cdcmpeq                
+00007b21  __aeabi_cdcmple                
+00007ba7  __aeabi_cdrcmple               
+00007cb1  __aeabi_memclr                 
+00007cb1  __aeabi_memclr4                
+00007cb1  __aeabi_memclr8                
+00007cb3  __aeabi_memset                 
+00007cb3  __aeabi_memset4                
+00007cb3  __aeabi_memset8                
+00007cb9  memset                         
+00007e0d  __TI_auto_init                 
+00007e85  printf                         
+00007eed  CO_CANtxBufferInit             
+0000802d  __TI_writemsg                  
+0000805b  C$$IO$$                        
+0000805f  __TI_readmsg                   
+00008095  fseek                          
+0000815d  crc16_ccitt                    
+000081b9  frexp                          
+000081b9  frexpl                         
+0000826f  CO_isError                     
+000082c9  CO_CANinit                     
+00008321  CO_CANsend                     
+00008377  ltoa                           
+000083cd  C$$EXIT                        
+000083d1  abort                          
+000083d9  exit                           
+00008421  CO_OD_getFlagsPointer          
+00008475  atoi                           
+000084c1  copy_in                        
+0000850d  __aeabi_d2iz                   
+0000859d  _c_int00                       
+00008691  CO_fifo_init                   
+000086c7  strncpy                        
+000086f7  __aeabi_i2d                    
+00008725  memchr                         
+00008745  memccpy                        
+00008761  _args_main                     
+00008779  strcmp                         
+000087a7  strchr                         
+000087bd  strcpy                         
+00008875  _register_unlock               
+0000887b  _register_lock                 
+00008883  _nop                           
+00008889  strlen                         
+0000889d  CO_CANsetNormalMode            
+000088ad  __TI_decompress_none           
+000088bb  CO_CANmodule_disable           
+000088c5  CO_CANsetConfigurationMode     
+000088cf  copysign                       
+000088cf  copysignl                      
+000088d7  __TI_decompress_rle24          
+000088dd  _system_pre_init               
+000088e0  CO_OD                          
+00008f8c  _ctypes_                       
+00009090  OD_record1600                  
+000090d8  OD_record1601                  
+00009120  OD_record1602                  
+00009168  OD_record1603                  
+000091b0  OD_record1A00                  
+000091f8  OD_record1A01                  
+00009240  OD_record1A02                  
+00009288  OD_record1A03                  
+000092d0  OD_record1800                  
+00009308  OD_record1801                  
+00009340  OD_record1802                  
+00009378  OD_record1803                  
+000093b0  OD_record2120                  
+000093e0  OD_record1018                  
+00009408  OD_record1280                  
+00009428  OD_record2130                  
+00009448  OD_record1200                  
+00009460  OD_record1400                  
+00009478  OD_record1401                  
+00009490  OD_record1402                  
+000094a8  OD_record1403                  
+000094c0  CO_OD_ROM                      
+0000971c  CO                             
+00009720  CO_OD_RAM                      
+00009860  _ftable                        
+00009a20  CO_OD_EEPROM                   
+00009a6c  __TI_ft_end                    
+00009a70  __aeabi_stdin                  
+00009a74  __aeabi_stdout                 
+00009a78  __aeabi_stderr                 
+00009a7c  __TI_cleanup_ptr               
+00009a80  __TI_dtors_ptr                 
+00009a84  __TI_enable_exit_profile_output
+00009a94  _lock                          
+00009a98  _unlock                        
+00009aa0  errno                          
+00009aa8  main_func_sp                   
+00009aac  CO_timer1ms                    
+00009ab0  __CIOBUF_                      
+00009bd0  __TI_tmpnams                   
+00009cd0  __stack                        
+00009dd0  __STACK_END                    
+00009dd0  _sys_memory                    
+00009dd8  __TI_static_base__             
+00009f7c  __TI_Handler_Table_Base        
+00009f84  __TI_CINIT_Base                
+00009f84  __TI_Handler_Table_Limit       
+00009f94  __TI_CINIT_Limit               
+ffffffff  __TI_pprof_out_hndl            
+ffffffff  __TI_prof_data_size            
+ffffffff  __TI_prof_data_start           
+ffffffff  __binit__                      
+ffffffff  __c_args__                     
+ffffffff  binit                          
+UNDEFED   SHT$$INIT_ARRAY$$Base          
+UNDEFED   SHT$$INIT_ARRAY$$Limit         
+
+[206 symbols]
